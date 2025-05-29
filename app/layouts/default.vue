@@ -1,0 +1,53 @@
+<script setup>
+
+const props = defineProps(['title', 'description'])
+
+import global_settings from '../data/global_settings.json'
+
+useHead({
+  htmlAttrs: { lang: 'en' },
+  title: props.title ?? global_settings.title,
+  meta: [
+    { charset: 'utf-8' },
+    { name: 'viewport', content: 'width=device-width' },
+    { name: 'description', content: props.description ?? global_settings.description },
+    { name: 'theme-color', content: global_settings.theme_color },
+    { property: 'og:title', content: props.title ?? global_settings.title },
+    { property: 'og:description', content: props.description ?? global_settings.description },
+    { property: 'og:image', content: global_settings.base_url + global_settings.social_image },
+  ],
+  link: [
+    { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+    { rel: 'manifest', href: '/manifest.json' },
+  ],
+})
+
+</script>
+
+
+<template>
+  <div>
+    <!-- Skip link -->
+    <a class="fixed -top-20 focus-visible:top-0 p-3 bg-black/90 transition-all duration-300" href="#main">Skip to
+      content</a>
+
+    <!-- bg image -->
+    <NuxtImg src="/hero-image.jpg" alt="" format="avif" :height="1080" :width="1920"
+      class="absolute min-h-svh object-cover inset-0 bottom-auto -z-1 w-full h-auto opacity-20 mask-b-from-50%"
+      loading="eager" />
+
+    <!-- Header -->
+    <HeaderMain :settings="global_settings" />
+
+    <!-- Main slot -->
+    <main id="main">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <FooterMain :settings="global_settings" />
+
+    <!-- Demo dialog modal -->
+    <DialogModal id="demo" :demo="global_settings.demo" />
+  </div>
+</template>
