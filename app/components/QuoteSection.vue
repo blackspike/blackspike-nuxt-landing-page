@@ -1,36 +1,42 @@
 <script setup>
+
 const props = defineProps(['content', 'image', 'cite', 'role'])
+
 </script>
 
-<template
-<!-- Quote -->
-<blockquote class="bs-container bs-mt-lg font-display text-3xl md:text-5xl lg:text-6xl flex flex-col gap-6" id="quote">
+<template>
 
-  <!-- Text -->
-  <div v-html="content" class="text-bs-foreground-dark bs-st-quote [&_strong]:font-normal font-display" />
+  <!-- Quote -->
+  <blockquote class="bs-container bs-mt-lg font-display text-3xl md:text-5xl lg:text-6xl flex flex-col gap-6" id="quote">
 
-  <!-- Cite -->
-  <cite class="not-italic flex gap-4 items-center">
+    <!-- Text -->
+    <div v-html="content" class="text-bs-foreground-dark bs-st-quote [&_strong]:font-normal font-display" />
 
-    <img
-      :src="image"
-      class="h-12 w-12 rounded-full"
-      alt=""
-      width="128"
-      height="128"
-      loading="lazy"
-    >
+    <!-- Cite -->
+    <cite class="not-italic flex gap-4 items-center">
 
-    <div class="text-bs-foreground-light bs-h3">
-      {{ cite }} <span class="text-bs-foreground-dark">{{ role }}</span>
-    </div>
+      <img
+        :src="image"
+        class="h-12 w-12 rounded-full"
+        alt=""
+        width="128"
+        height="128"
+        loading="lazy"
+      >
 
-  </cite>
+      <div class="text-bs-foreground-light bs-h3">
 
-</blockquote>
+        {{ cite }} <span class="text-bs-foreground-dark">{{ role }}</span>
+
+      </div>
+
+    </cite>
+
+  </blockquote>
 
 </template>
-<style is:global>
+
+<style>
 
 /* Lighten text when scrolling into view */
 

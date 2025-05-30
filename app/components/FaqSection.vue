@@ -1,8 +1,11 @@
 <script setup>
+
 const props = defineProps(['title', 'faq'])
+
 </script>
 
 <template>
+
   <section class="bs-container bs-mt-lg grid" id="faq">
 
     <!-- Title -->
@@ -17,4 +20,5 @@ const props = defineProps(['title', 'faq'])
     </div>
 
   </section>
+
 </template>

@@ -4,32 +4,32 @@ const props = defineProps(['title', 'description'])
 
 import global_settings from '../data/global_settings.json'
 
-useHead({
-  htmlAttrs: { lang: 'en' },
+useSeoMeta({
   title: props.title ?? global_settings.title,
-  meta: [
-    { charset: 'utf-8' },
-    { name: 'viewport', content: 'width=device-width' },
-    { name: 'description', content: props.description ?? global_settings.description },
-    { name: 'theme-color', content: global_settings.theme_color },
-    { property: 'og:title', content: props.title ?? global_settings.title },
-    { property: 'og:description', content: props.description ?? global_settings.description },
-    { property: 'og:image', content: global_settings.base_url + global_settings.social_image },
-  ],
-  link: [
+  ogTitle: props.title ?? global_settings.title,
+  description: props.description ?? global_settings.description ,
+  ogDescription: props.description ?? global_settings.description ,
+  ogImage: global_settings.base_url + global_settings.social_image,
+  twitterCard: 'summary_large_image',
+  themeColor: global_settings.theme_color,
+  viewport: 'width=device-width, initial-scale=1',
+  charset: 'utf-8',
+  htmlAttrs: { lang: 'en' },
+  icon: [
     { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-    { rel: 'manifest', href: '/manifest.json' },
-  ],
+    { rel: 'manifest', href: '/manifest.json' }
+  ]
 })
 
 </script>
 
-
 <template>
   <div>
+
     <!-- Skip link -->
-    <a class="fixed -top-20 focus-visible:top-0 p-3 bg-black/90 transition-all duration-300" href="#main">Skip to
-      content</a>
+    <a class="fixed -top-20 focus-visible:top-0 p-3 bg-black/90 transition-all duration-300" href="#main">
+      Skip to content
+    </a>
 
     <!-- bg image -->
     <NuxtImg src="/hero-image.jpg" alt="" format="avif" :height="1080" :width="1920"
@@ -49,5 +49,6 @@ useHead({
 
     <!-- Demo dialog modal -->
     <DialogModal id="demo" :demo="global_settings.demo" />
+
   </div>
 </template>

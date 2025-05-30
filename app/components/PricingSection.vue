@@ -1,12 +1,14 @@
 <script setup>
+
 import Check from '~/assets/theme-images/icon-check.svg'
 import Cube from '~/assets/theme-images/icon-cube.svg'
 import CubeOutline from '~/assets/theme-images/icon-cube-outline.svg'
 
 const props = defineProps(['title', 'pricing'])
+
 </script>
 
- <template>
+<template>
 
   <section class="bs-container bs-mt-lg" id="pricing">
 
@@ -46,12 +48,17 @@ const props = defineProps(['title', 'pricing'])
 
           <!-- Services list -->
           <ul role="list" class="flex flex-col gap-4 my-8">
+
             <li v-for="(service, sIdx) in item.services" :key="sIdx" class="flex gap-2 md:gap-3 items-center">
+
               <!-- Check -->
               <Check height="24" width="24" />
+
               <!-- Item -->
               <span class="text-xl">{{ service.item }}</span>
+
             </li>
+
           </ul>
 
           <!-- CTA -->
@@ -59,14 +66,19 @@ const props = defineProps(['title', 'pricing'])
 
             <!-- Price -->
             <span class="text-4xl lg:text-5xl">
+
               £{{ item.price }}
+
               <span class="text-2xl hidden @md:inline-block -translate-y-1 ms-2"> / month</span>
+
             </span>
 
             <!-- CTA button -->
             <button type="button" class="bs-btn inline-block self-start @4xl:mt-12 text-xl"
-              @click="demo.showModal && demo.showModal()">
+              @click="useDialogOpen">
+
               {{ item.cta }}
+
             </button>
 
           </footer>
@@ -78,4 +90,5 @@ const props = defineProps(['title', 'pricing'])
     </div>
 
   </section>
+
 </template>

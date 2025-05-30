@@ -1,8 +1,8 @@
 {
-  "title": "blackspike astro landing page",
-  "description": "A free Astro landing theme made with Tailwind",
+  "title": "blackspike nuxt landing page",
+  "description": "A free Nuxt landing theme made with Tailwind",
   "social_image": "/1200x630.jpg",
-  "base_url": "https://astro-theme.blackspike.com",
+  "base_url": "https://nuxt-theme.blackspike.com",
   "demo": {
     "title": "Need design?",
     "content": "<strong>Get a guided tour through our services</strong>, and find out how you and your team can change the way you work, forever.",

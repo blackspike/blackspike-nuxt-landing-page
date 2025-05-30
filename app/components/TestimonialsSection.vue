@@ -1,15 +1,19 @@
 <script setup>
+
 const props = defineProps(['title', 'testimonials'])
+
 </script>
 
 <template>
 
   <section class="bs-container bs-mt-lg">
+
     <!-- Title -->
     <h2 v-if="title" class="bs-h2 text-center md:text-left">{{ title }}</h2>
 
     <!-- Testimonials -->
     <div class="group bs-mt-md grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 place-content-center gap-4">
+
       <blockquote
         v-for="(item, idx) in testimonials"
         :key="idx"
@@ -29,8 +33,11 @@ const props = defineProps(['title', 'testimonials'])
 
         <!-- Cite -->
         <cite class="not-italic text-bs-foreground-dark text-sm font-semibold">@{{ item.handle }}</cite>
+
       </blockquote>
+
     </div>
+
   </section>
 
 </template>

@@ -1,5 +1,7 @@
 <script setup>
+
 const props = defineProps(['newsletter'])
+
 </script>
 
 <template>
@@ -10,7 +12,12 @@ const props = defineProps(['newsletter'])
     <div class="p-6 md:py-16 relative rounded-xl overflow-hidden flex justify-center isolate w-full h-full">
 
       <!-- BG image -->
-      <NuxtImg src="/hero-image.jpg" alt="" format="avif" :height="1080" :width="1920"
+      <NuxtImg
+        src="/hero-image.jpg"
+        alt=""
+        format="avif"
+        :height="1080"
+        :width="1920"
         class="rounded-xl overflow-hidden w-full h-full object-cover object-left absolute inset-0 opacity-50" />
 
       <!-- Content -->
@@ -25,12 +32,16 @@ const props = defineProps(['newsletter'])
         <!-- Form -->
         <form class="flex gap-4 flex-col" action="">
 
+          <!-- Name -->
           <label class="sr-only" for="nl-name">Name</label>
+
           <input id="nl-name"
             class="border-2 rounded-lg text-center bg-bs-surface-0 border-bs-surface-3 form-input px-4 py-3"
             placeholder="Your name">
 
+          <!-- Email -->
           <label class="sr-only" for="nl-email">Email</label>
+
           <input id="nl-email" type="email"
             class="border-2 rounded-lg text-center bg-bs-surface-0 border-bs-surface-3 form-input px-4 py-3"
             placeholder="Your email">
@@ -45,7 +56,5 @@ const props = defineProps(['newsletter'])
 
   </aside>
 
-
 </template>
-
 

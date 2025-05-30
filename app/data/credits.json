@@ -1,6 +1,6 @@
 {
   "title": "Credits",
-  "content": "This is a little theme made with <a href='https://astro.build/'>Astro</a> and <a href='https://tailwindcss.com/'>Tailwind</a> by <a href='https://www.blackspike.com'>blackspike design</a>. <a href='https://github.com/blackspike/blackspike-astro-landing-page'>View the code on GitHub</a>.",
+  "content": "This is a little theme made with <a href='https://nuxt.com/'>Nuxt</a> and <a href='https://tailwindcss.com/'>Tailwind</a> by <a href='https://www.blackspike.com'>blackspike design</a>. <a href='https://github.com/blackspike/blackspike-nuxt-landing-page'>View the code on GitHub</a>.",
   "list": [
     {
       "item": "Fake logos by <a href='https://uicontent.co/svg-dummy-logo/'>uicontent.co</a>"

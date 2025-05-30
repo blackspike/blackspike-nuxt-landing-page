@@ -1,58 +1,79 @@
 <script setup>
+
 import X from '~/assets/theme-images/icon-x.svg'
+
 const props = defineProps(['demo'])
+
+const modal_dialog = ref()
+const closeDialogModal = () => modal_dialog.value.close('close')
+
 </script>
 
 <template>
-  <dialog id="demo" class="fixed inset-0 bg-bs-surface-0 m-auto z-50 p-6 md:p-12 rounded-xl w-full max-w-[95%] md:max-w-lg">
+
+  <dialog id="demo" ref="modal_dialog" closedby="any" class=" fixed inset-0 bg-bs-surface-0 m-auto z-50 p-6 md:p-12
+    rounded-xl w-full max-w-[95%] md:max-w-lg">
+
     <!-- Form -->
     <form method="dialog" class="flex gap-6 flex-col">
+
       <!-- Header -->
       <h2 class="text-2xl flex justify-between items-center gap-4">
+
         <span>{{ demo.title }}</span>
-        <button
-          type="button"
-          @click="closeDialog"
-          aria-label="Close"
-          class="bs-btn rounded-full !p-0 flex items-center justify-center h-10 w-10"
-        >
+
+        <button type="button" @click="closeDialogModal" aria-label="Close"
+          class="bs-btn rounded-full !p-0 flex items-center justify-center h-10 w-10">
           <X class="scale-75 opacity-75" width="32" height="32" />
+
         </button>
+
       </h2>
+
       <!-- Content -->
       <div class="flex flex-col gap-4">
+
         <!-- Intro -->
         <div class="bs-body-text mb-3" v-html="demo.content" />
+
         <!-- Form inputs -->
+
         <!-- Name -->
         <label class="sr-only" for="name">Name</label>
+
         <input
           id="name"
           type="text"
           class="border-2 rounded-lg bg-bs-surface-0 border-bs-surface-3 form-input px-4 py-3"
-          placeholder="Your name"
-        />
+          placeholder="Your name" />
+
         <!-- Company -->
         <label class="sr-only" for="company">Company</label>
+
         <input
           id="company"
           type="text"
           class="border-2 rounded-lg bg-bs-surface-0 border-bs-surface-3 form-input px-4 py-3"
-          placeholder="Your company"
-        />
+          placeholder="Your company" />
+
         <!-- Email -->
         <label class="sr-only" for="email">Email</label>
+
         <input
           id="email"
           type="email"
           class="border-2 rounded-lg bg-bs-surface-0 border-bs-surface-3 form-input px-4 py-3"
-          placeholder="Your email"
-        />
+          placeholder="Your email" />
+
         <!-- Submit -->
         <button class="bs-btn form-input px-4 py-3">{{ demo.cta }}</button>
+
       </div>
+
     </form>
+
   </dialog>
+
 </template>
 
 <style>
@@ -89,6 +110,5 @@ dialog[open]::backdrop {
   }
 
 }
-
 
 </style>

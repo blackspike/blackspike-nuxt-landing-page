@@ -12,22 +12,50 @@ import testimonials from '../data/testimonials.json'
 
 <template>
 
-  <HeroSection :content="home.hero_content" :settings="global_settings" :title="home.hero_title" />
+  <HeroSection
+    :content="home.hero_content"
+    :settings="global_settings"
+    :title="home.hero_title"
+  />
 
-  <ServicesCarousel :services="services" :title="home.services_title" />
+  <ServicesCarousel
+    :services="services"
+    :title="home.services_title"
+  />
 
-  <ClientsSection :clients="clients" :title="home.clients_title" />
+  <ClientsSection
+    :clients="clients"
+    :title="home.clients_title"
+  />
 
-  <QuoteSection :cite="home.quote_cite" :content="home.quote_content" :image="home.quote_image"
-    :role="home.quote_role" />
+  <QuoteSection
+    :cite="home.quote_cite"
+    :content="home.quote_content"
+    :image="home.quote_image"
+    :role="home.quote_role"
+  />
 
-  <CaseStudiesSection :caseStudies="caseStudies" :title="home.case_studies_title" />
+  <CaseStudiesSection
+    :caseStudies="caseStudies"
+    :title="home.case_studies_title"
+  />
 
-  <TestimonialsSection :testimonials="testimonials" :title="home.testimonials_title" />
+  <TestimonialsSection
+    :testimonials="testimonials"
+    :title="home.testimonials_title"
+    />
 
-  <PricingSection :pricing="pricing" :title="home.pricing_title" />
-  <FaqSection :faq="faq" :title="home.faq_title" />
+  <PricingSection
+    :pricing="pricing"
+    :title="home.pricing_title"
+    />
+
+  <FaqSection
+    :faq="faq"
+    :title="home.faq_title"
+  />
 
   <NewsletterSection :newsletter="newsletter" />
+
 </template>
 

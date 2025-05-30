@@ -1,4 +1,5 @@
 <script setup>
+
 import Logo from '~/assets/theme-images/logo.svg'
 
 const props = defineProps(['settings'])
@@ -6,19 +7,18 @@ const props = defineProps(['settings'])
 const sortedNav = computed(() =>
   [...(props.settings?.nav || [])].sort((a, b) => a.title.localeCompare(b.title))
 )
+
 const sortedSocialLinks = computed(() =>
   [...(props.settings?.social_links || [])].sort((a, b) => a.title.localeCompare(b.title))
 )
 
-function showModal() {
-  // Implement modal logic here
-  alert('Show demo modal')
-}
 </script>
 
 <template>
 
-  <footer class="@container bs-container my-24 font-semibold text-bs-foreground-dark [&_a]:hover:text-bs-foreground-light [&_a]:transition-color [&_a]:duration-150" id="contact">
+  <footer
+    class="@container bs-container my-24 font-semibold text-bs-foreground-dark [&_a]:hover:text-bs-foreground-light [&_a]:transition-color [&_a]:duration-150"
+    id="contact">
 
     <!-- Wrapper -->
     <div class="bg-bs-surface-2 p-6 md:p-16 rounded-xl grid md:grid-cols-2 gap-8">
@@ -28,15 +28,20 @@ function showModal() {
 
         <!-- Logo -->
         <a class="flex group" href="#top" aria-label="Back to top">
-          <Logo class="group-hover:-rotate-180 group-hover:scale-80 transition-transform ease-bs-spring duration-1000" height="48" width="48" />
+
+          <Logo class="group-hover:-rotate-180 group-hover:scale-80 transition-transform ease-bs-spring duration-1000"
+            height="48" width="48" />
+
         </a>
 
         <!-- CTA title -->
         <h2 class="bs-h3">{{ settings.demo.title }}</h2>
 
         <!-- CTA Button -->
-        <button type="button" class="min-w-32 bs-btn block bg-bs-surface-3" @click="showModal()">
+        <button type="button" class="min-w-32 bs-btn block bg-bs-surface-3" @click="useDialogOpen">
+
           {{ settings.demo.cta }}
+
         </button>
 
       </div>
@@ -46,26 +51,24 @@ function showModal() {
 
         <!-- Nav -->
         <nav class="flex flex-col">
-          <a
-            v-for="item in sortedNav"
-            :key="item.title"
-            :href="item.link"
-          >
+
+          <a v-for="item in sortedNav" :key="item.title" :href="item.link">
             {{ item.title }}
           </a>
+
         </nav>
 
         <!-- Social links -->
         <nav class="flex flex-col">
-          <a
-            v-for="item in sortedSocialLinks"
-            :key="item.title"
-            :href="item.link"
-          >
+
+          <a v-for="item in sortedSocialLinks" :key="item.title" :href="item.link">
             {{ item.title }}
           </a>
+
         </nav>
+
       </div>
+
     </div>
 
     <!-- Colophon -->
@@ -77,13 +80,14 @@ function showModal() {
         <a href="https://blackspike.com/">by blackspike.com</a>
 
         <!-- Credits -->
-        <a href="/credits">about / credits</a>
+        <nuxt-link to="/credits">about / credits</nuxt-link>
 
       </nav>
 
     </aside>
 
   </footer>
+
 </template>
 
 
