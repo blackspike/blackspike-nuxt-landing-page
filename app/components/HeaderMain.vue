@@ -1,12 +1,7 @@
 <script setup>
 import Logo from '~/assets/theme-images/logo.svg'
 
-defineProps({
-  settings: {
-    type: Object,
-    required: true
-  }
-})
+const props = defineProps(['settings'])
 
 function showDemo() {
   // Replace with your modal logic

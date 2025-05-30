@@ -3,7 +3,7 @@ import Check from '~/assets/theme-images/icon-check.svg'
 import Cube from '~/assets/theme-images/icon-cube.svg'
 import CubeOutline from '~/assets/theme-images/icon-cube-outline.svg'
 
-defineProps(['title', 'pricing'])
+const props = defineProps(['title', 'pricing'])
 </script>
 
  <template>

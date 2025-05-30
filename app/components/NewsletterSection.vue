@@ -1,5 +1,5 @@
 <script setup>
-defineProps(['newsletter'])
+const props = defineProps(['newsletter'])
 </script>
 
 <template>

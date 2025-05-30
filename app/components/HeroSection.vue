@@ -1,6 +1,6 @@
 <script setup>
 
-defineProps(['settings', 'title', 'content'])
+const props = defineProps(['settings', 'title', 'content'])
 
 function showDemo() {
   const demo = document.getElementById('demo')

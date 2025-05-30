@@ -1,6 +1,6 @@
 <script setup>
 import X from '~/assets/theme-images/icon-x.svg'
-defineProps(['demo'])
+const props = defineProps(['demo'])
 </script>
 
 <template>
