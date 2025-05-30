@@ -11,8 +11,12 @@ const closeDialogModal = () => modal_dialog.value.close('close')
 
 <template>
 
-  <dialog id="demo" ref="modal_dialog" closedby="any" class=" fixed inset-0 bg-bs-surface-0 m-auto z-50 p-6 md:p-12
-    rounded-xl w-full max-w-[95%] md:max-w-lg">
+  <dialog
+    id="demo"
+    closedby="any"
+    ref="modal_dialog"
+    class="fixed inset-0 bg-bs-surface-0 m-auto z-50 p-6 md:p-12 rounded-xl w-full max-w-[95%] md:max-w-lg"
+  >
 
     <!-- Form -->
     <form method="dialog" class="flex gap-6 flex-col">
@@ -41,27 +45,21 @@ const closeDialogModal = () => modal_dialog.value.close('close')
         <!-- Name -->
         <label class="sr-only" for="name">Name</label>
 
-        <input
-          id="name"
-          type="text"
+        <input id="name" type="text"
           class="border-2 rounded-lg bg-bs-surface-0 border-bs-surface-3 form-input px-4 py-3"
           placeholder="Your name" />
 
         <!-- Company -->
         <label class="sr-only" for="company">Company</label>
 
-        <input
-          id="company"
-          type="text"
+        <input id="company" type="text"
           class="border-2 rounded-lg bg-bs-surface-0 border-bs-surface-3 form-input px-4 py-3"
           placeholder="Your company" />
 
         <!-- Email -->
         <label class="sr-only" for="email">Email</label>
 
-        <input
-          id="email"
-          type="email"
+        <input id="email" type="email"
           class="border-2 rounded-lg bg-bs-surface-0 border-bs-surface-3 form-input px-4 py-3"
           placeholder="Your email" />
 
