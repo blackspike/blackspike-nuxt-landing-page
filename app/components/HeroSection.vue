@@ -1,11 +1,6 @@
 <script setup>
-import { defineProps } from 'vue'
 
-const props = defineProps({
-  settings: Object,
-  title: String,
-  content: String
-})
+defineProps(['settings', 'title', 'content'])
 
 function showDemo() {
   const demo = document.getElementById('demo')

@@ -1,7 +1,7 @@
 <script setup>
 import Logo from '~/assets/theme-images/logo.svg'
 
-const props = defineProps({
+defineProps({
   settings: {
     type: Object,
     required: true

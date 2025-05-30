@@ -1,10 +1,5 @@
 <script setup>
-const props = defineProps([
-  'content',
-  'image',
-  'cite',
-  'role'
-])
+defineProps(['content', 'image', 'cite', 'role'])
 </script>
 
 <template

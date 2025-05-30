@@ -1,6 +1,6 @@
 <script setup>
 
-const props = defineProps(['caseStudy'])
+defineProps(['caseStudy'])
 
 </script>
 

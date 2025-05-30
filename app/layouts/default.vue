@@ -1,6 +1,6 @@
 <script setup>
 
-const props = defineProps(['title', 'description'])
+defineProps(['title', 'description'])
 
 import global_settings from '../data/global_settings.json'
 

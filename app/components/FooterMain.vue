@@ -1,7 +1,7 @@
 <script setup>
 import Logo from '~/assets/theme-images/logo.svg'
 
-const props = defineProps(['settings'])
+defineProps(['settings'])
 
 const sortedNav = computed(() =>
   [...(props.settings?.nav || [])].sort((a, b) => a.title.localeCompare(b.title))

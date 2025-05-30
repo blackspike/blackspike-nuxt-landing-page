@@ -4,13 +4,7 @@ import Swiper from 'swiper'
 import 'swiper/css'
 import Arrow from '~/assets/theme-images/icon-arrow.svg'
 
-const props = defineProps({
-  title: String,
-  services: {
-    type: Array,
-    default: () => []
-  }
-})
+defineProps(['title', 'services'])
 
 const prevBtn = ref(null)
 const nextBtn = ref(null)

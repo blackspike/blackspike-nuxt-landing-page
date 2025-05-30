@@ -1,6 +1,6 @@
 <script setup>
 import Arrow from '~/assets/theme-images/icon-arrow.svg'
-const props = defineProps(['question', 'answer'])
+defineProps(['question', 'answer'])
 </script>
 
 <template>
