@@ -5,8 +5,27 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  devtools: { enabled: true },
   ssr: true,
+  app: {
+    head: {
+      title: 'blackspike nuxt landing page', // default fallback title
+      htmlAttrs: {
+        lang: 'en',
+      },
+      meta: [
+        { charset: 'utf-8' },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1, viewport-fit=cover',
+        },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'manifest', href: '/manifest.json' }
+      ],
+      viewport: 'width=device-width, initial-scale=1',
+    }
+  },
   modules: ['@nuxt/fonts', '@nuxt/image', 'nuxt-svgo-loader'],
   css: [
     '~/assets/css/base.css',
