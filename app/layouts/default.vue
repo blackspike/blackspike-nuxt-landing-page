@@ -5,6 +5,9 @@ const props = defineProps(['title', 'description'])
 import global_settings from '../data/global_settings.json'
 
 useSeoMeta({
+  htmlAttrs: {
+    lang: 'en',
+  },
   title: props.title ?? global_settings.title,
   ogTitle: props.title ?? global_settings.title,
   description: props.description ?? global_settings.description ,
@@ -14,7 +17,6 @@ useSeoMeta({
   themeColor: global_settings.theme_color,
   viewport: 'width=device-width, initial-scale=1',
   charset: 'utf-8',
-  htmlAttrs: { lang: 'en' },
   icon: [
     { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
     { rel: 'manifest', href: '/manifest.json' }
