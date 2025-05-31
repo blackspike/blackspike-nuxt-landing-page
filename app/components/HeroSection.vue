@@ -36,11 +36,15 @@ const props = defineProps(['settings', 'title', 'content'])
     <!-- Image -->
     <figure class="flex place-content-center -mt-20 lg:mt-0">
 
-      <img
-        src="~/assets/theme-images/hero-screens.png"
+      <NuxtImg
+        fit="contain"
+        format="avif"
+        width="1290"
+        height="1000"
+        quality="90"
+        src="/hero-screens.png"
         alt="Screens showing phone, tablet and desktop views of our website"
         loading="eager"
-        style="image-rendering: auto"
       />
 
     </figure>

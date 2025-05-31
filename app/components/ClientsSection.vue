@@ -21,7 +21,7 @@ const props = defineProps(['title', 'clients'])
         :href="item.link"
       >
 
-        <NuxtImg
+        <img
           :src="item.image"
           :alt="item.title"
           class="opacity-60 max-w-32 min-h-16 group-hover:scale-[1.05] group-hover:-translate-y-1 group-hover:opacity-100 group-hover:-rotate-1 ease-bs-bounce transition-all duration-1000"
