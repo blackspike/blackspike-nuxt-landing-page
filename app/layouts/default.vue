@@ -17,7 +17,6 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
 
     <!-- Skip link -->
     <a class="fixed -top-20 focus-visible:top-0 p-3 bg-black/90 transition-all duration-300" href="#main">
@@ -43,5 +42,4 @@ useSeoMeta({
     <!-- Demo dialog modal -->
     <DialogModal id="demo" :demo="global_settings.demo" />
 
-  </div>
 </template>
