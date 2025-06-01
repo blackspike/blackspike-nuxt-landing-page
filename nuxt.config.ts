@@ -1,39 +1,35 @@
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from "@tailwindcss/vite"
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+
+  // SSR mode
+
   ssr: true,
+
+  // Meta data
+
   app: {
     head: {
       title: 'blackspike nuxt landing page', // default fallback title
       htmlAttrs: {
         lang: 'en',
       },
-      meta: [
-        { charset: 'utf-8' },
-        {
-          name: 'viewport',
-          content: 'width=device-width, initial-scale=1, viewport-fit=cover',
-        },
-      ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'manifest', href: '/manifest.json' }
       ],
-      viewport: 'width=device-width, initial-scale=1',
     }
   },
+
+  //  Nuxt modules
+
   modules: ['@nuxt/fonts', '@nuxt/image', '@nuxt/icon'],
-  css: [
-    '~/assets/css/base.css',
-    '~/assets/css/buttons.css',
-    '~/assets/css/global.css',
-    '~/assets/css/layout.css',
-    '~/assets/css/typography.css',
-  ],
+
+  // Nuxt icons
+
   icon: {
     customCollections: [
       {
@@ -42,11 +38,25 @@ export default defineNuxtConfig({
       },
     ],
   },
+
+  // Nuxt fonts
+
   fonts: {
     defaults: {
       weights: [400, 500, 600, 700]
     },
   },
+
+  // Tailwind
+
+  css: [
+    '~/assets/css/base.css',
+    '~/assets/css/buttons.css',
+    '~/assets/css/global.css',
+    '~/assets/css/layout.css',
+    '~/assets/css/typography.css',
+  ],
+
   vite: {
     plugins: [
       tailwindcss(),
