@@ -26,7 +26,7 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
     }
   },
-  modules: ['@nuxt/fonts', '@nuxt/image', 'nuxt-svgo-loader'],
+  modules: ['@nuxt/fonts', '@nuxt/image', '@nuxt/icon'],
   css: [
     '~/assets/css/base.css',
     '~/assets/css/buttons.css',
@@ -34,6 +34,14 @@ export default defineNuxtConfig({
     '~/assets/css/layout.css',
     '~/assets/css/typography.css',
   ],
+  icon: {
+    customCollections: [
+      {
+        prefix: 'bs-icon',
+        dir: './app/assets/icons'
+      },
+    ],
+  },
   fonts: {
     defaults: {
       weights: [400, 500, 600, 700]

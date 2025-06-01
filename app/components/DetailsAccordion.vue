@@ -1,17 +1,13 @@
 <script setup>
 
-import Arrow from '~/assets/theme-images/icon-arrow.svg'
-
 const props = defineProps(['question', 'answer'])
 
 </script>
 
 <template>
 
-  <details
-    name="faq"
-    class="group bg-bs-surface-2 hover:bg-bs-surface-3 open:bg-bs-surface-3 transition-colors w-full shadow-md rounded-lg bs-h3"
-  >
+  <details name="faq"
+    class="group bg-bs-surface-2 hover:bg-bs-surface-3 open:bg-bs-surface-3 transition-colors w-full shadow-md rounded-lg bs-h3">
 
     <!-- Summary -->
     <summary class="flex gap-3 justify-between items-center p-6 py-5">
@@ -21,7 +17,9 @@ const props = defineProps(['question', 'answer'])
 
       <!-- Icon -->
       <span>
-        <Arrow class="opacity-60 h-4 w-4 transition -rotate-90 group-open:rotate-90 ease-bs-bounce duration-1000" height="16" width="25" />
+        <Icon name="bs-icon:arrow"
+          class="opacity-60 h-4 w-4 transition -rotate-90 group-open:rotate-90 ease-bs-bounce duration-1000"
+          size="16" />
       </span>
 
     </summary>

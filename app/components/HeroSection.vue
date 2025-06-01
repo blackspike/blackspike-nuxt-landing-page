@@ -24,7 +24,7 @@ const props = defineProps(['settings', 'title', 'content'])
       <button
         type="button"
         class="bs-btn self-start bs-mt-sm"
-        @click="showDemo"
+        @click="useDialogOpen"
       >
 
         {{ settings.demo.cta }}

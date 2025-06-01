@@ -1,9 +1,5 @@
 <script setup>
 
-import Check from '~/assets/theme-images/icon-check.svg'
-import Cube from '~/assets/theme-images/icon-cube.svg'
-import CubeOutline from '~/assets/theme-images/icon-cube-outline.svg'
-
 const props = defineProps(['title', 'pricing'])
 
 </script>
@@ -31,7 +27,15 @@ const props = defineProps(['title', 'pricing'])
           <h2 class="bs-h3 flex gap-3 items-center">
 
             <!-- Icon -->
-            <component :is="index === 1 ? Cube : CubeOutline" height="32" width="32" />
+            <Icon
+              v-if="index === 1"
+              name="bs-icon:cube"
+              size="32" />
+
+            <Icon
+              v-else
+              name="bs-icon:cube-outline"
+              size="32" />
 
             <!-- Title -->
             <span>{{ item.title }}</span>
@@ -52,7 +56,7 @@ const props = defineProps(['title', 'pricing'])
             <li v-for="(service, sIdx) in item.services" :key="sIdx" class="flex gap-2 md:gap-3 items-center">
 
               <!-- Check -->
-              <Check height="24" width="24" />
+              <Icon name="bs-icon:check" size="24" />
 
               <!-- Item -->
               <span class="text-xl">{{ service.item }}</span>

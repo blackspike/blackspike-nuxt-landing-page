@@ -1,7 +1,5 @@
 <script setup>
 
-import Logo from '~/assets/theme-images/logo.svg'
-
 const props = defineProps(['settings'])
 
 </script>
@@ -17,22 +15,19 @@ const props = defineProps(['settings'])
       <!-- Logo -->
       <a class="flex xl:min-w-32 group" href="/" :aria-label="settings.title + ' - Home'">
 
-        <Logo
+        <Icon
+          name="bs-icon:logo"
           class="group-hover:-rotate-180 group-hover:scale-80 transition-transform ease-bs-spring duration-1000"
-          height="48"
-          width="48" />
-
+          size="48"
+        />
       </a>
 
       <!-- Nav -->
       <nav class="hidden col-span-6 md:flex mx-auto self-stretch lg:gap-2">
 
         <!-- Links -->
-        <a
-          v-for="item in settings.nav"
-          :key="item.link"
-          class="bs-btn !bg-transparent before:translate-y-full hover:before:translate-y-0"
-          :href="item.link">
+        <a v-for="item in settings.nav" :key="item.link"
+          class="bs-btn !bg-transparent before:translate-y-full hover:before:translate-y-0" :href="item.link">
 
           {{ item.title }}
 

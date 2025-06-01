@@ -1,22 +1,13 @@
 <script setup>
 
-import X from '~/assets/theme-images/icon-x.svg'
-
 const props = defineProps(['demo'])
-
-const modal_dialog = ref()
-const closeDialogModal = () => modal_dialog.value.close('close')
 
 </script>
 
 <template>
 
-  <dialog
-    id="demo"
-    closedby="any"
-    ref="modal_dialog"
-    class="fixed inset-0 bg-bs-surface-0 m-auto z-50 p-6 md:p-12 rounded-xl w-full max-w-[95%] md:max-w-lg"
-  >
+  <dialog id="demo" closedby="any" ref="modal_dialog"
+    class="fixed inset-0 bg-bs-surface-0 m-auto z-50 p-6 md:p-12 rounded-xl w-full max-w-[95%] md:max-w-lg">
 
     <!-- Form -->
     <form method="dialog" class="flex gap-6 flex-col">
@@ -26,9 +17,10 @@ const closeDialogModal = () => modal_dialog.value.close('close')
 
         <span>{{ demo.title }}</span>
 
-        <button type="button" @click="closeDialogModal" aria-label="Close"
+        <button type="button" onclick="this.closest('dialog').close('close')" aria-label="Close dialog"
           class="bs-btn rounded-full !p-0 flex items-center justify-center h-10 w-10">
-          <X class="scale-75 opacity-75" width="32" height="32" />
+
+          <Icon name="bs-icon:x" size="20" />
 
         </button>
 

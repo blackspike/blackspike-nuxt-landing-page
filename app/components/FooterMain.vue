@@ -1,7 +1,5 @@
 <script setup>
 
-import Logo from '~/assets/theme-images/logo.svg'
-
 const props = defineProps(['settings'])
 
 const sortedNav = computed(() =>
@@ -29,8 +27,9 @@ const sortedSocialLinks = computed(() =>
         <!-- Logo -->
         <a class="flex group" href="#top" aria-label="Back to top">
 
-          <Logo class="group-hover:-rotate-180 group-hover:scale-80 transition-transform ease-bs-spring duration-1000"
-            height="48" width="48" />
+          <Icon name="bs-icon:logo"
+            class="group-hover:-rotate-180 group-hover:scale-80 transition-transform ease-bs-spring duration-1000"
+            size="48" />
 
         </a>
 

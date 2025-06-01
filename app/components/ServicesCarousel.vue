@@ -1,5 +1,4 @@
 <script setup>
-import Arrow from '~/assets/theme-images/icon-arrow.svg'
 
 import Swiper from 'swiper'
 import 'swiper/css'
@@ -56,7 +55,10 @@ onMounted(() => {
         <button aria-label="Previous slide" ref="prevBtn"
           class="js-fc-btn-prev group bs-btn rounded-full !p-0 flex items-center justify-center h-10 w-10 md:h-12 md:w-12">
 
-          <Arrow class="opacity-60 h-4 w-4 -translate-x-[2px] group-active:translate-y-[1px]" height="16" width="25" />
+          <Icon
+            name="bs-icon:arrow"
+            class="opacity-60 h-4 w-4 -translate-x-[2px] group-active:translate-y-[1px]"
+            size="16" />
 
         </button>
 
@@ -64,7 +66,10 @@ onMounted(() => {
         <button aria-label="Next slide" ref="nextBtn"
           class="js-fc-btn-next group bs-btn rounded-full !p-0 flex items-center justify-center h-10 w-10 md:h-12 md:w-12 -scale-x-100">
 
-          <Arrow class="opacity-60 h-4 w-4 -translate-x-[2px] group-active:translate-y-[1px]" height="16" width="25" />
+          <Icon
+            name="bs-icon:arrow"
+            class="opacity-60 h-4 w-4 -translate-x-[2px] group-active:translate-y-[1px]"
+            size="16" />
 
         </button>
 
