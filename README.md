@@ -1,75 +1,74 @@
-# Nuxt Minimal Starter
+# blackspike Nuxt landing page
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[<img src="public/theme-preview/github-preview.jpg" alt="screens showing theme parts on iPads" style="max-width: 100%; height: auto; width: 100%;" width="1600">](public/theme-preview/github-preview.jpg)
 
-## Setup
+## A free, modern, [nuxt](https://nuxt.com/) landing page theme made with [Tailwind](https://tailwindcss.com/) to help kick start your next Nuxt project
 
-Make sure to install dependencies:
+We built this page as the first version of our own website, [blackspike.com](https://www.blackspike.com), but switched to a different design later.
 
-```bash
-# npm
-npm install
+Rather than let it gather dust, we decided to modernise it, try out some fresh new CSS features and give it back to the Nuxt community.
 
-# pnpm
-pnpm install
+You can read more about how we built it and the cool new tech we used [on our blog post](https://www.blackspike.com/blog/converting-an-astro-website-to-nuxt-4/).
 
-# yarn
-yarn install
 
-# bun
-bun install
-```
+## Live demo https://nuxt-theme.blackspike.com
 
-## Development Server
+We hope you find it useful!
 
-Start the development server on `http://localhost:3000`:
+## License
 
-```bash
-# npm
-npm run dev
+Theme and 3D images are licensed under a [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/).
 
-# pnpm
-pnpm dev
+Created by blackspike [blackspike design](https://www.blackspike.com) – a web design & development team specialising in Nuxt, Vue, Nuxt & Wordpress websites
 
-# yarn
-yarn dev
+## CSS & HTML Features
 
-# bun
-bun run dev
-```
+- [Tailwind 4](https://tailwindcss.com/blog/tailwindcss-v4)
+- HTML modal dialog
+- JS-free scroll-linked animations
+- JS-free exclusive accordions with details/summary (animated!)
+- Container queries
+- Linear easing for bouncing / springing
+- Text wrap pretty / balance
 
-## Production
+## JS Features
 
-Build the application for production:
+- [swiper.js](https://swiperjs.com/) carousel
 
-```bash
-# npm
-npm run build
+## Previews
 
-# pnpm
-pnpm build
+[<img src="public/theme-preview/blackspike-theme-1.jpg" alt="screenshot of dark theme landing page on desktop and on ipad browsers" style="max-width: 100%; height: auto; width: 100%;" width="1600">](public/theme-preview/blackspike-theme-1.jpg)
 
-# yarn
-yarn build
+[<img src="public/theme-preview/blackspike-theme-2.jpg" alt="screenshot of dark theme carousel slides with 3D backgrounds" style="max-width: 100%; height: auto; width: 100%;" width="1600">](public/theme-preview/blackspike-theme-2.jpg)
 
-# bun
-bun run build
-```
+[<img src="public/theme-preview/blackspike-theme-4.jpg" alt="screens showing theme parts" style="max-width: 100%; height: auto; width: 100%;" width="1600">](public/theme-preview/blackspike-theme-4.jpg)
 
-Locally preview production build:
+[<img src="public/theme-preview/blackspike-theme-5.jpg" alt="dark theme pricing section on laptop and iPhone browsers" style="max-width: 100%; height: auto; width: 100%;" width="1600">](public/theme-preview/blackspike-theme-5.jpg)
 
-```bash
-# npm
-npm run preview
+[<img src="public/theme-preview/blackspike-theme-full.webp" alt="full page preview" style="max-width: 100%; height: auto; width: 100%;" width="1600">](public/theme-preview/blackspike-theme-full.webp)
 
-# pnpm
-pnpm preview
+## Credits
 
-# yarn
-yarn preview
+- Fake logos by [uicontent.co](https://uicontent.co/svg-dummy-logo/)
+- Quote avatar person by [thispersondoesnotexist.com](https://thispersondoesnotexist.com/)
+- Misc icons and logo from [icones.js.org](https://icones.js.org/) by [@antfu](https://github.com/antfu)
+- Carousel powered by [swiperjs.com](https://swiperjs.com/)
+- Inter font by [rsms.me](https://rsms.me/inter/)
 
-# bun
-bun run preview
-```
+## Tags
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+#tailwind #tailwind4 #nuxt #landingPage #css #html #swiper #dark #theme
+
+## Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run Nuxt ...`       | Run CLI commands like `nuxt add`, `nuxt check` |
+| `npm run Nuxt -- --help` | Get help using the Nuxt CLI                     |
+
