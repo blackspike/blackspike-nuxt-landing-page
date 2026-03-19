@@ -55,9 +55,7 @@ onMounted(() => {
         <button aria-label="Previous slide" ref="prevBtn"
           class="js-fc-btn-prev group bs-btn rounded-full !p-0 flex items-center justify-center h-10 w-10 md:h-12 md:w-12">
 
-          <Icon
-            name="bs-icon:arrow"
-            class="opacity-60 h-4 w-4 -translate-x-[2px] group-active:translate-y-[1px]"
+          <Icon name="bs-icon:arrow" class="opacity-60 h-4 w-4 -translate-x-[2px] group-active:translate-y-[1px]"
             size="16" />
 
         </button>
@@ -66,9 +64,7 @@ onMounted(() => {
         <button aria-label="Next slide" ref="nextBtn"
           class="js-fc-btn-next group bs-btn rounded-full !p-0 flex items-center justify-center h-10 w-10 md:h-12 md:w-12 -scale-x-100">
 
-          <Icon
-            name="bs-icon:arrow"
-            class="opacity-60 h-4 w-4 -translate-x-[2px] group-active:translate-y-[1px]"
+          <Icon name="bs-icon:arrow" class="opacity-60 h-4 w-4 -translate-x-[2px] group-active:translate-y-[1px]"
             size="16" />
 
         </button>
@@ -82,7 +78,7 @@ onMounted(() => {
 
       <div class="swiper-wrapper">
 
-        <div v-for="(item, idx) in services" :key="idx"
+        <div v-for="(item, idx) in [...services, ...services]" :key="idx"
           class="swiper-slide bg-bs-surface-0 border border-bs-surface-3 rounded-xl overflow-hidden !h-auto">
 
           <figure class="flex flex-col gap-6 isolate min-h-[50svh] md:min-h-[40rem] h-full relative">
@@ -129,12 +125,13 @@ onMounted(() => {
 
 
 <style>
-
 /* Show buttons only when in view */
 
 @keyframes show-buttons {
-  to { opacity: 1; }
- }
+  to {
+    opacity: 1;
+  }
+}
 
 @supports (animation-timeline: view()) {
   .bs-st-button-wrapper {
@@ -143,5 +140,4 @@ onMounted(() => {
     animation-timeline: view(20% block);
   }
 }
-
 </style>
